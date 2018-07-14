@@ -82,7 +82,7 @@ def all_supplies_in_holidays(holiday_hash)
   # etc.
   itemList = ""
   holiday_hash.each do |season, holiday|
-   itemList << "#{season.to_s.capitalize}: "          #should return something like "Winter:"
+   itemList << "#{season.to_s.capitalize}: \n"          #should return something like "Winter:"
    end
    puts itemList
 end
