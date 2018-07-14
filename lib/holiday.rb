@@ -83,10 +83,10 @@ def all_supplies_in_holidays(holiday_hash)
   itemList = ""
   holiday_hash.each do |season, holiday|
    itemList << "#{season.to_s.capitalize}: \n"          #should return something like "Winter:"
-   holiday.each do |pointer, itemList|
+   holiday.each do |pointer, itemArray|
      itemList << "  #{pointer.to_s.capitalize}:" 
-     itemList.each do |items|
-      itemList << items
+     itemArray.each do |items|
+      itemList << "#{items} "
      end
    end
   end
