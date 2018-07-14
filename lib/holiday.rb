@@ -88,7 +88,7 @@ def all_supplies_in_holidays(holiday_hash)
     holiday.each do |array, items|
       print "#{items}"
       
-      end
+      
     end
   end
   puts itemList
