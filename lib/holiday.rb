@@ -105,7 +105,7 @@ def all_holidays_with_bbq(holiday_hash)
     holiday.each.do |pointer,items|
       if items.include?("BBQ")
         returnArray << season
-      end
+      
     end
   end
   returnArray
