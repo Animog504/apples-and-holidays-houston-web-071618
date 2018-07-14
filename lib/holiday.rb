@@ -71,7 +71,7 @@ def all_winter_holiday_supplies(holiday_hash)
   end
     returnArray                         #RETURN THE HELL OUT OF THAT!!!!
 end
-
+#============================================= WORK HERE
 def all_supplies_in_holidays(holiday_hash)
   # iterate through holiday_hash and print items such that your readout resembles:
   # Winter:
@@ -83,10 +83,16 @@ def all_supplies_in_holidays(holiday_hash)
   itemList = ""
   holiday_hash.each do |season, holiday|
    itemList << "#{season.to_s.capitalize}: \n"          #should return something like "Winter:"
+   holiday.each do |pointer, itemList|
+     itemList << "  #{pointer.to_s.capitalize}:" 
+     itemList.each do |items|
+      itemList << items
+     end
    end
+  end
    puts itemList
 end
-
+#=============================================
 def all_holidays_with_bbq(holiday_hash)
   # return an array of holiday names (as symbols) where supply lists
   # include the string "BBQ"
