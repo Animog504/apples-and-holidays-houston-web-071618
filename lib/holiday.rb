@@ -84,9 +84,13 @@ def all_supplies_in_holidays(holiday_hash)
   holiday_hash.each do |season, holiday|
    itemList << "#{season.to_s.capitalize}: \n"          #should return something like "Winter:"
    holiday.each do |pointer, itemArray|
-     itemList << "  #{pointer.to_s.capitalize}:" 
-     itemArray.each do |items|
-      itemList << "#{items} "
+     itemList << "  #{pointer.to_s.capitalize}:\n" 
+     itemArray.each_with_index do |items, index|
+      if index < itemArray.length-1
+       itemList << "#{items}, "
+      else
+       itemList << "#{items}\n"
+      end
      end
    end
   end
